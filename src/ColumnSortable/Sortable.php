@@ -58,7 +58,7 @@ trait Sortable
         } else {
             throw new InvalidArgumentException('Relation must be of type BelongsTo or HasOne');
         }
-        return $query->select($parentTable . '.*')->join($relatedTable, $parentKey, '=', $relatedKey);
+        return $query->join($relatedTable, $parentKey, '=', $relatedKey);
     }
 
     /**
